@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="0" />
 
             <ImageView
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="1" />
 
             <ImageView
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="2" />
 
 
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="0" />
 
             <ImageView
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="1" />
 
             <ImageView
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="2" />
 
 
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="0" />
 
             <ImageView
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="1" />
 
             <ImageView
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20sp"
-                android:src="@drawable/cross"
+                android:src="@drawable/circle"
                 android:tag="2" />
 
 
