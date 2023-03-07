@@ -12,6 +12,15 @@
         android:theme="@style/Theme.TicTacToe"
         tools:targetApi="31">
         <activity
+            android:name=".draw"
+            android:exported="false" />
+        <activity
+            android:name=".Owin"
+            android:exported="false" />
+        <activity
+            android:name=".Xwin"
+            android:exported="false" />
+        <activity
             android:name=".GamePage"
             android:exported="false" />
         <activity
