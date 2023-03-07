@@ -13,12 +13,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/message"
+            android:id="@+id/messageo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -37,6 +37,21 @@
             app:lottie_speed="1"
             app:lottie_fileName="congratulations.json"
             android:visibility="visible"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/o_reset"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_again"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            app:rippleColor="#e3342f"
+            app:cornerRadius="10dp"
             />
 
 

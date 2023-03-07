@@ -13,30 +13,42 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg1"
         >
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome"
+            android:text="@string/welcome"
             android:textSize="30sp"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:gravity="center"
+            android:textStyle="bold"
             />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/gotogamepage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/go_to_game_page"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:cornerRadius="10dp"
-            />
+
+
+           <com.google.android.material.button.MaterialButton
+               android:id="@+id/gotogamepage"
+               android:layout_marginTop="100dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/play_game"
+               android:backgroundTint="@color/white"
+               android:textColor="@color/black"
+               android:textStyle="bold"
+               android:layout_gravity="center"
+               app:cornerRadius="10dp"
+               app:rippleColor="#FF0000"
+               />
+
+
+
 
 
 

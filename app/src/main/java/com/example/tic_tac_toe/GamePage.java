@@ -48,23 +48,34 @@ public class GamePage extends AppCompatActivity {
         }else{
             Toast.makeText(getApplicationContext(),"Box is filled",Toast.LENGTH_SHORT).show();
         }
+        boolean flag = false;
+        for(int i = 0;i<state.length;i++){
+            if(state[i]==2) flag = true;
+        }
+
+        if(flag){
+            for(int[] win : winpos){
+                if(state[win[0]]==state[win[1]] && state[win[1]]==state[win[2]] && state[win[0]]!=2){
+                    gameActive=false;
+                    if(state[win[0]]==1){
+                        //X has won
+                        Intent intent = new Intent(GamePage.this,Xwin.class);
+                        startActivity(intent);
+                    }else{
+                        //O has won
+                        Intent intent = new Intent(GamePage.this,Owin.class);
+                        startActivity(intent);
+                    }
+                }
+            }
+        }else{
+            Intent intent = new Intent(GamePage.this,draw.class);
+            startActivity(intent);
+        }
 
         //check for winners
 
-        for(int[] win : winpos){
-            if(state[win[0]]==state[win[1]] && state[win[1]]==state[win[2]] && state[win[0]]!=2){
-                gameActive=false;
-                if(state[win[0]]==1){
-                    //X has won
-                    Intent intent = new Intent(GamePage.this,Xwin.class);
-                    startActivity(intent);
-                }else{
-                    //O has won
-                    Intent intent = new Intent(GamePage.this,Owin.class);
-                    startActivity(intent);
-                }
-            }
-        }
+
 
 
 
