@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 
@@ -25,6 +27,23 @@ public class draw extends AppCompatActivity {
 
         TextView message = findViewById(R.id.messaged);
 
+        MediaPlayer transition = MediaPlayer.create(this,R.raw.draws);
+        try{
+            transition.start();
+
+            transition.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    transition.release();
+                }
+            });
+        }catch(Exception e){
+            Toast.makeText(getApplicationContext(),"Media cannot be played",Toast.LENGTH_SHORT).show();
+        }
+
+
+
+
         Button reset = findViewById(R.id.draw_reset);
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,11 +59,12 @@ public class draw extends AppCompatActivity {
             public void onAnimationStart(@NonNull Animator animator) {
                 String msg = "Match Drawn";
                 message.setText(msg);
+                Toast.makeText(getApplicationContext(),"Draw",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAnimationEnd(@NonNull Animator animator) {
-                String text = "Try Again";
+                String text = "Draw Match";
                 message.setText(text);
 
             }

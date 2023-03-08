@@ -8,7 +8,7 @@
     android:overScrollMode="never"
     android:padding="24dp"
     android:scrollbars="none"
-    android:background="#87CEEB"
+    android:background="@drawable/bg2"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -29,6 +29,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textStyle="bold"
+            android:layout_marginTop="20dp"
             />
 
 
@@ -45,6 +46,7 @@
                android:layout_gravity="center"
                app:cornerRadius="10dp"
                app:rippleColor="#FF0000"
+               android:layout_marginBottom="30dp"
                />
 
 

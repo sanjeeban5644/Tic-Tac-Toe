@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0077be"
+    android:background="@drawable/bg3"
     tools:context=".GamePage">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="@string/play_game"
-        android:textColor="@color/black"
+        android:textColor="#FF8C00"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="#FF8C00"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
