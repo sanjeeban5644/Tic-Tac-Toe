@@ -51,8 +51,9 @@ public class Owin extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Owin.this,GamePage.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Owin.this,GamePage.class);
+//                startActivity(intent);
+                onBackPressed();
             }
         });
 

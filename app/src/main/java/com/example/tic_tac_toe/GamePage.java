@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,7 +18,7 @@ public class GamePage extends AppCompatActivity {
 
 
 
-    boolean gameActive = true;
+    boolean gameActive=true;
 
     //0->O
     //1->X
@@ -27,6 +28,19 @@ public class GamePage extends AppCompatActivity {
     //Game State
     int[] state = {2,2,2,2,2,2,2,2,2};
     int[][] winpos = {{0,1,2},{3,4,5},{6,7,8},{0,4,8},{2,4,6},{0,3,6},{1,4,7},{2,5,8}};
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Refresh the activity here
+        for(int i : state){
+            if(i!=2){
+                recreate();
+            }
+        }
+
+    }
 
 
     public void onTap(View view){
@@ -61,11 +75,16 @@ public class GamePage extends AppCompatActivity {
                         //X has won
                         Intent intent = new Intent(GamePage.this,Xwin.class);
                         startActivity(intent);
+                        //new section
+
+                        //end of new section
                     }else{
                         //O has won
                         Intent intent = new Intent(GamePage.this,Owin.class);
                         startActivity(intent);
                     }
+
+
                 }
             }
         }else{
@@ -85,6 +104,22 @@ public class GamePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_page);
+
+
+        MediaPlayer transition = MediaPlayer.create(this,R.raw.bell);
+        try{
+            transition.start();
+
+            transition.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    transition.release();
+                }
+            });
+        }catch(Exception e){
+            Toast.makeText(getApplicationContext(),"Media cannot be played",Toast.LENGTH_SHORT).show();
+        }
+
 
 
         TextView status = findViewById(R.id.status);

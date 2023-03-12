@@ -56,9 +56,9 @@ public class Xwin extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(Xwin.this,GamePage.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Xwin.this,GamePage.class);
+//                startActivity(intent);
+                onBackPressed();
             }
         });
 

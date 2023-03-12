@@ -48,8 +48,7 @@ public class draw extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(draw.this,GamePage.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
 
